@@ -140,25 +140,32 @@ div#box.chart .box-panel{
 	padding: 0;
 }
 
-div#box.chart table {
-    border-collapse: collapse;
-    width: 100%;
+div#box.chart #table {
+	display: table;
+	width: 100%;
 }
 
-div#box.chart.fixed table {
-	table-layout: fixed;
+div#box.chart .column{
+	padding: 0 15px;
+	display: table-cell;
+	width: 33.33%;
 }
 
-div#box.chart th, div#box.chart td {
+div#box.chart .row{
 	vertical-align: top;
-    padding: 15px;
+	padding-bottom: 15px;
 }
 
-div#box.chart th:nth-child(odd), div#box.chart td:nth-child(odd){
+div#box.chart .row.header{
+	padding-top: 15px;
+	font-weight: 800;
+}
+
+div#box.chart .column:nth-child(odd) {
 	background-color: #d5e4ef;
 }
 
-div#box.chart th:nth-child(even), div#box.chart td:nth-child(even) {
+div#box.chart .column:nth-child(even) {
 	background-color: #fff;
 }
 
@@ -182,6 +189,11 @@ a.mobile:active {
 
 	.content {
 		margin-left: 0px;
+	}
+
+	div#box.chart .column {
+		display: block;
+		width: 100%;
 	}
 }
 
