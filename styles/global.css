@@ -165,6 +165,10 @@ div#box .box-top {
 	font-weight: 300;
 }
 
+div#box.warning .box-top {
+	background-color: #b94a29;
+}
+
 div#box .box-panel {
 	padding: 15px;
 	background-color: #fff;
