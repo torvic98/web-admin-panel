@@ -45,7 +45,7 @@
 					Purchase</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="./logout.php">
 						<div class="nav-icon">
 							<i class="material-icons">exit_to_app</i>
 						</div>
