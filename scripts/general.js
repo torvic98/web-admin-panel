@@ -11,6 +11,8 @@ $(document).ready(function(){
 
 	$('.spoiler .box-top').click(function(e) {  
 		var collapse = $(this).parent().children(".box-panel");
+		$(this).toggleClass("icon-drop-down");
+		$(this).toggleClass("icon-drop-up");
 		$(collapse).slideToggle("fast");
 	});
 });

@@ -39,6 +39,13 @@ input, textarea, button, select, a {
 	width: 100%;
 }
 
+[class^='icon-'], [class*=' icon-'] {
+	background-repeat: no-repeat;
+	background-position: center;
+	min-width: 16px;
+	min-height: 16px;
+}
+
 /** Header bar **/
 
 div#header {
@@ -167,6 +174,7 @@ div#box .box-top {
 	color: #fff;
 	text-shadow: 0px 1px #000;
 	background-color: #2980b9;
+	background-position: right 0.5em center;
 	padding: 8px;
 	padding-left: 15px;
 	font-weight: 300;
@@ -182,15 +190,18 @@ div#box .box-panel {
 	color: #333;
 }
 
+/** Spoiler **/
+
 div#box.spoiler .box-top {
 	cursor:pointer;
 }
 
-/** Spoiler **/
+.icon-drop-down {
+	background-image: url(../img/ic_arrow_drop_down_white.svg);
+}
 
-div#box.spoiler #spoiler-drop-down {
-	float: right;
-	font-size: 1.5em;
+.icon-drop-up {
+	background-image: url(../img/ic_arrow_drop_up_white.svg);
 }
 
 div#box.spoiler .box-panel{
