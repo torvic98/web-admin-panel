@@ -1,4 +1,7 @@
-<?php echo("<!--- Header begin -->"); ?>
+<?php
+	require("secure.php");
+	echo("<!--- Header begin -->"); 
+?>
 <html>
 
 <?php require("head.php"); ?>

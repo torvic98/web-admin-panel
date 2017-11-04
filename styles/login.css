@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	font-family: 'Open Sans';
+	color: #333;
+	background-image: url(../img/login-background.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #2f2f2f;
+}
+
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -70px;
+	width: 300px;
+}
+
+form {
+	position: relative;
+	width: 280px;
+	margin: 0 auto;
+	padding: 0;
+	padding-top: 236px;
+}
+
+input {
+	font-size: 20px;
+	margin: 5px;
+	padding: 11px 10px 9px;
+	outline: none;
+	border-radius: 3px;
+}
+
+input[type='text'], input[type='password'] {
+	width: 249px;
+	background: #fff;
+	color: #555;
+	cursor: text;
+	font-family: inherit;
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	box-sizing: content-box;
+	border: none;
+	font-weight: 300;
+}
+
+.field-top {
+	margin-bottom: 0!important;
+	border-bottom: 0!important;
+	border-bottom-left-radius: 0!important;
+	border-bottom-right-radius: 0!important;
+}
+
+.field-bottom {
+	margin-top: 0!important;
+	border-top: 0!important;
+	border-top-right-radius: 0!important;
+	border-top-left-radius: 0!important;
+	box-shadow: 0 1px 0 rgba(0,0,0,.1) inset!important;
+}
+
+input[type='submit'] {
+	width: auto;
+	min-width: 25px;
+	padding: 10px 20px;
+	background-color: rgba(240,240,240,.9);
+	font-weight: 600;
+	color: #555;
+	border: 1px solid rgba(240,240,240,.9);
+	cursor: pointer;
+}
+
+input.primary {
+	background-color: #1abc9c;
+	border: 1px solid #1abc9c;
+	color: #fff;
+}
+
+input.login {
+	width: 269px;
+	background-position: right 16px center;
+}
+
+[class^='icon-'], [class*=' icon-'] {
+	background-repeat: no-repeat;
+	background-position: center;
+	min-width: 16px;
+	min-height: 16px;
+}
+
+.icon-confirm-white {
+	background-image: url(../img/confirm-white.svg);
+}
+
+.remember-login-container {
+	display: inline-block;
+	margin: 10px 0;
+	text-align: center;
+	width: 100%;
+}
+
+form input[type='checkbox']+label {
+	text-align: center;
+	color: #fff;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+
+input#remember_login {
+	display: none;
+}
+
+#remember_login+label {
+	opacity: .6;
+}
+
+#remember_login:hover+label {
+	opacity: 1;
+}
+
+#remember_login:checked+label {
+	opacity: 1;
+	text-decoration: underline;
+}
