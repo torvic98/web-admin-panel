@@ -139,16 +139,17 @@ ul#nav li a.selected {
 .content {
 	width: auto;
 	margin-left: 200px;
-	height: calc( 100% - 50px);
+	height: calc( 100vh - 50px);
 	background-color: #f1f1f1; 
 	padding: 20px;
 	overflow-y: auto;
 }
 
-@-moz-document url-prefix() {
-	.content {
-		height: 100%;
-	}
+.content:after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 100%;
 }
 
 .content p {
@@ -371,12 +372,6 @@ input[type="reset"].default:hover {
 	}
 
 	.sidebar {
-		height: calc( 100% - 50px);
-	}
-	
-	@-moz-document url-prefix() {
-		.sidebar {
-			height: 100%;
-		}
+		height: calc( 100vh - 50px);
 	}
 }
