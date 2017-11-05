@@ -1,10 +1,15 @@
 <?php
-	require("secure.php");
+	if (!file_exists("./config/config.php")){
+		header("Location: ./install.php");
+	}
+	require_once("./config/config.php");
+	require_once("sql.php");
+	require_once("secure.php");
 	echo("<!--- Header begin -->"); 
 ?>
 <html>
 
-<?php require("head.php"); ?>
+<?php require_once("head.php"); ?>
 
 <body>
 
@@ -15,7 +20,7 @@
 
 	<div id="container">
 		
-		<?php require("sidebar.php"); ?>
+		<?php require_once("sidebar.php"); ?>
 		
 		<div class="content">
 <?php echo("<!--- Header end -->"); ?>
