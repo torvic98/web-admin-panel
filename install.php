@@ -2,7 +2,7 @@
 	error_reporting(E_ERROR | E_PARSE);
 
 	function init_sql($CONFIG, &$warning) {
-		$conn = new mysqli($CONFIG['dbhost'], $CONFIG['dbuser'], $CONFIG['dbpassword'], "",$CONFIG['dbport']);
+		$conn = new mysqli($CONFIG['dbhost'], $CONFIG['dbuser'], $CONFIG['dbpassword'], "", $CONFIG['dbport']);
 
 		if ($conn->connect_error) {
 			$warning = "Connection with server failed: " . $conn->connect_error;
@@ -34,6 +34,7 @@
 					email VARCHAR(50),
 					groups TEXT,
 					reg_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+					last_login TIMESTAMP NOT NULL DEFAULT 0,
 					last_modified TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 								 ON UPDATE CURRENT_TIMESTAMP
 					)";
@@ -111,7 +112,7 @@
 					// Data base has been created
 					// All configuration done
 					$CONFIG['installed'] = true;
-					$file_content = "<?php\n" .
+					$file_content = "<?php\n  \$CONFIG = " .
 									var_export($CONFIG, true)
 									. ";\n?>";
 					file_put_contents('config/config.php', $file_content);
@@ -132,8 +133,8 @@
 <body>
 	<div class="wrapper">
 		<div id="header">
-			<div class="logo">
-			</div>
+			<div class="logo"></div>
+		</div>
 		<form method="post" name="login">
 			<input type="text" name="adminuser" id="adminuser" class="field-top" placeholder="Usuario administrador" value="<?php if (!empty($_POST)) echo $_POST["adminuser"]; ?>" autofocus="" autocomplete="on" autocapitalize="none" autocorrect="off" required="required" pattern="[\w0-9]*" maxlength="16">
 			
