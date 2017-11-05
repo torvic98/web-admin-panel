@@ -32,7 +32,7 @@
 					firstname VARCHAR(30) NOT NULL,
 					lastname VARCHAR(30) NOT NULL,
 					email VARCHAR(50),
-					groups TEXT,
+					guid VARCHAR(10) NOT NULL,
 					reg_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 					last_login TIMESTAMP NOT NULL DEFAULT 0,
 					last_modified TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
