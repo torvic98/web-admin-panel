@@ -6,11 +6,7 @@
 		header('Location: ./install.php');
 	}
 
-	function connect_sql () {
-		global $CONFIG;
-		$c = new mysqli($CONFIG['dbhost'], $CONFIG['dbuser'], $CONFIG['dbpassword'], $CONFIG['dbname'], $CONFIG['dbport']);
-		return $c;
-	}
+	require_once("./include/sql.php");
 
 	function test_login($user, $passwd) {
 		global $CONFIG;
@@ -19,13 +15,13 @@
 		}
 		else {
 			$conn = connect_sql();
-			$query = "SELECT id, password
+			$query = "SELECT password
 					  FROM " . $CONFIG["dbtableprefix"] . "users
 					  WHERE id='" . $user . "';";
 			$result = $conn->query($query);
 
 			$correct = FALSE;
-			if ($result->num_rows === 1) {
+			if ($result && $result->num_rows === 1) {
 				$row = $result->fetch_assoc();
 				$correct = password_verify($passwd, $row["password"]);
 				$result->close();
