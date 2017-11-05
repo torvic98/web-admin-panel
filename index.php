@@ -1,5 +1,5 @@
 <?php
-	require("include/header.php");
+	require_once("include/header.php");
 
 	echo("<!--- Content begin -->");
 ?>
@@ -111,5 +111,5 @@
 <?php
 	echo("<!--- Content end -->");
 
-	require("include/footer.php");
+	require_once("include/footer.php");
 ?>

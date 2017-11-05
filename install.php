@@ -87,7 +87,7 @@
 			exit("Not found: config.sample.php");
 		}
 		else {
-			require('config/config.sample.php');
+			require_once('config/config.sample.php');
 
 			if (!empty($_POST)) {
 				$CONFIG['adminuser'] = $_POST['adminuser'];
