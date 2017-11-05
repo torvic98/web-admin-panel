@@ -1,7 +1,7 @@
 <?php
-array (
+  $CONFIG = array (
   'adminuser' => 'admin',
-  'adminpass' => '$2y$10$eGmDnFFquIStIliFRhVcjusdlbllLPknJUgN0qW7CmSs/rvD9rf8W',
+  'adminpass' => '$2y$10$Ba2LrfAADu7pFnc9MtyJS.BIQt6R6nx9q10Nz6aqsehc5PJvVRrue',
   'trusted_domains' => 
   array (
     0 => 'localhost',
