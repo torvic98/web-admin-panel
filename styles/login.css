@@ -24,12 +24,26 @@ body {
 	width: 300px;
 }
 
+#header {
+    padding-top: 100px;
+}
+
+#header .logo {
+	background-repeat: no-repeat;
+    background-size: 175px;
+    background-position: center;
+    width: 252px;
+    min-height: 120px;
+    max-height: 200px;
+    margin: 0 auto;
+    background-image: url(../img/logo.png?v=10);
+}
+
 form {
 	position: relative;
 	width: 280px;
-	margin: 0 auto;
+	margin: 16px auto;
 	padding: 0;
-	padding-top: 236px;
 }
 
 input {
@@ -60,6 +74,15 @@ input[type='text'], input[type='password'] {
 	border-bottom-right-radius: 0!important;
 }
 
+.field-middle {
+	margin-top: 0!important;
+    margin-bottom: 0!important;
+    border-top: 0!important;
+    border-bottom: 0!important;
+    border-radius: 0!important;
+    box-shadow: 0 1px 0 rgba(0,0,0,.1) inset!important;
+}
+
 .field-bottom {
 	margin-top: 0!important;
 	border-top: 0!important;
@@ -88,6 +111,18 @@ input.primary {
 input.login {
 	width: 269px;
 	background-position: right 16px center;
+}
+
+.warning {
+	margin-top: 15px;
+    display: block;
+    padding: 10px;
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
+    font-size: 0.85em;
+    text-align: left;
+    border-radius: 3px;
+    cursor: default;
 }
 
 [class^='icon-'], [class*=' icon-'] {
